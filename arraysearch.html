@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Search Methods and Iterations</title>
+</head>
+<body>
+
+<h2>Array Methods Output</h2>
+<p id="result"></p>
+
+<script>
+    let numbers = [10, 20, 30, 40, 50];
+
+    // search methods
+    let findValue = numbers.find(n => n > 25);
+    let findIndex = numbers.findIndex(n => n > 25);
+    let includesValue = numbers.includes(30);
+
+    // iteration methods
+    let mapped = numbers.map(n => n * 2);
+    let filtered = numbers.filter(n => n > 25);
+
+    let sum = 0;
+    numbers.forEach(n => sum += n);
+
+    // display output
+    document.getElementById("result").innerHTML =
+        "Find: " + findValue + "<br>" +
+        "Find Index: " + findIndex + "<br>" +
+        "Includes 30: " + includesValue + "<br>" +
+        "Map: " + mapped + "<br>" +
+        "Filter: " + filtered + "<br>" +
+        "Sum (forEach): " + sum;
+</script>
+
+</body>
+</html>
